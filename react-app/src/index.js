@@ -1,4 +1,11 @@
-import ReactDOM from 'react-dom'
 import React from 'react'
+import ReactDOM from "react-dom";
+import App from './App'
 
-ReactDOM.render(<h1>Hello, React-app!</h1>, document.getElementById('root'))
+import "./index.css";
+import "./components/header/Header.css"
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+)
