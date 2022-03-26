@@ -1,16 +1,17 @@
-import React,{useState} from 'react'
-import { Link } from 'react-router-dom'
+import React,{useState, useContext} from 'react'
+import { Link , Redirect} from 'react-router-dom'
 import firebase from 'firebase/compat/app';
+import { AuthContext } from '../AuthService'
 
 export const Login = ({history}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const user = useContext(AuthContext)
 
     const handleSubmit = e => {
     e.preventDefault();
     firebase
-        .auth()
-        .signInWithEmailAndPassword(email, password)
+        .auth().signInWithEmailAndPassword(email, password)
         .then(() => {
             history.push('/');
         })
@@ -18,6 +19,10 @@ export const Login = ({history}) => {
             console.log(err);
         });
     };
+    if (user) {
+        return <Redirect to="/" />
+    }
+
     return (
         <>
             <h1>Login</h1>        
@@ -29,6 +34,7 @@ export const Login = ({history}) => {
                         id='email' 
                         name='email' 
                         placeholder='Email'
+                        value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
                 </div>
@@ -39,6 +45,7 @@ export const Login = ({history}) => {
                         id='password' 
                         name='password'
                         placeholder='password'
+                        value={password}
                         onChange={e => setPassword(e.target.value)}
                     />
                 </div>

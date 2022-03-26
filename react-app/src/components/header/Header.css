@@ -1,12 +1,14 @@
 header {
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 100px;
   background-color: darkgrey;
   align-items: center;
+  margin: auto;
 }
 
 .title {
+  padding-left: 5%;
   margin-right: auto;
 }
 
@@ -15,4 +17,8 @@ header {
   display: inline-block;
   padding: 10px;
   margin-right: 15%;
+}
+
+.LogoutBtn {
+  padding-left: 20px;
 }

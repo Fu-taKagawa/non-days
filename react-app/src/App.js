@@ -6,6 +6,8 @@ import LoggedInRoute from "./LoggedInRoute";
 import Home from "./pages/Home";
 import Login  from './pages/Login';
 import SignUp  from './pages/SignUp';
+import Chat from "./pages/Chat";
+import Profile from "./pages/ProfilePages/Profile";
 
 const App=()=>{
     return(
@@ -15,6 +17,8 @@ const App=()=>{
                     <LoggedInRoute exact path='/' component={Home} />
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/signup' component={SignUp} />
+                    <Route exact path='/chat' component={Chat}/>
+                    <Route exact path='/profile' component={Profile}/>
                 </Switch>
             </Router>
         </AuthProvider>

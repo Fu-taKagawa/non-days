@@ -1,5 +1,10 @@
 {
   "dependencies": {
-    "styled-components": "^5.3.3"
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.5.1",
+    "styled-components": "^5.3.3",
+    "use-file-upload": "^1.0.11",
+    "util": "^0.12.4"
   }
 }
