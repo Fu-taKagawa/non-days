@@ -12,9 +12,9 @@ If you know Instagram, this app is like that.
  
 # Requirement
  
-*Docker 20.10.12
-*yarn 1.22.17
-*node 14.17.3
+* Docker 20.10.12
+* yarn 1.22.17
+* node 14.17.3
  
 # Installation
 ```yarn
