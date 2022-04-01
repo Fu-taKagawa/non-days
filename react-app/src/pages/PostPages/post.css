@@ -1,0 +1,26 @@
+
+/* トップページの記事スタイル */
+.postArea{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.postItem{
+    border: solid 1px #000;
+    margin-bottom: 20px;
+}
+
+.postItem__user{
+    border-bottom: solid 1px #000;
+}
+
+/* 記事投稿ページのスタイル */
+.postForm__text{
+    width: 70%;
+    height: 200px;
+}

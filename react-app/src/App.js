@@ -3,11 +3,12 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import {AuthProvider} from './AuthService';
 import LoggedInRoute from "./LoggedInRoute";
 
-import Home from "./pages/Home";
+import Home from "./pages/MainPage/Home";
 import Login  from './pages/Login';
 import SignUp  from './pages/SignUp';
 import Chat from "./pages/Chat";
 import Profile from "./pages/ProfilePages/Profile";
+import PostForm from "./pages/PostPages/PostForm";
 
 const App=()=>{
     return(
@@ -19,6 +20,7 @@ const App=()=>{
                     <Route exact path='/signup' component={SignUp} />
                     <Route exact path='/chat' component={Chat}/>
                     <Route exact path='/profile' component={Profile}/>
+                    <Route exact path='/postform' component={PostForm}/>
                 </Switch>
             </Router>
         </AuthProvider>
