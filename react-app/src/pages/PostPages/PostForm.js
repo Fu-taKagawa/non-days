@@ -7,10 +7,10 @@ const PostForm =()=>{
     const addPost = (text) => {
         setPosts([...posts, { content: text, id: nanoid() }]);
     };
-    const deletePost = (id) => {
-        const newPosts = posts.filter((post) => post.id !== id);
-        setPosts(newPosts);
-    };
+    // const deletePost = (id) => {
+    //     const newPosts = posts.filter((post) => post.id !== id);
+    //     setPosts(newPosts);
+    // };
     return(
         <>
             <Form 
