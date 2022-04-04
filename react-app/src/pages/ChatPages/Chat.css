@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.pc_block {
+    display: block;
+}
+
+@media screen and (max-width: 767px) {
+    .pc_block {
+        display: none;
+    }
+}
+
+.sp_block {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .sp_block {
+        display: block;
+    }
+}
+
+.chatArea{
+    margin: auto;
+    list-style: none;
+}
+
+.chatForm{
+    text-align: center;
+}
+
+.chatForm textarea{
+    width: 250px;
+    height: 100px;
+}

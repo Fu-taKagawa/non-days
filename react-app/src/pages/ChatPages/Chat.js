@@ -1,15 +1,17 @@
 import React,{useState, useEffect, useContext} from 'react'
-import {Header} from '../components/header/Header'
+import {Header} from '../../components/header/Header'
 import { Link } from 'react-router-dom'
-import firebase from '../config/firebase'
-import { AuthContext } from '../AuthService'
+import firebase from '../../config/firebase'
+import { AuthContext } from '../../AuthService'
 import moment from 'moment'
 
 const Chat = () => {
     const [messages, setMessages] = useState([])
     const [value, setValue] = useState('')
     const user = useContext(AuthContext)
-    messages.sort((a, b) => a.timestamp - b.timestamp)
+    messages.sort((a, b) => {
+        return a.timestamp - b.timestamp
+    })
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -38,13 +40,13 @@ const Chat = () => {
         <>
             <Header/>
             <div className='body'>
-                <ul>
+                <ul className='chatArea'>
                     {
                         React.Children.toArray(messages.map(messages=> <li>{messages.user}:{messages.content}</li>))
                     }
                 </ul>
-                <form onSubmit={handleSubmit}>
-                    <input
+                <form className='chatForm' onSubmit={handleSubmit}>
+                    <textarea
                         type="text"
                         value={value}
                         onChange={e => setValue(e.target.value)}

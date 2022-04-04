@@ -6,7 +6,7 @@ import LoggedInRoute from "./LoggedInRoute";
 import Home from "./pages/MainPage/Home";
 import Login  from './pages/Login';
 import SignUp  from './pages/SignUp';
-import Chat from "./pages/Chat";
+import Chat from "./pages/ChatPages/Chat";
 import Profile from "./pages/ProfilePages/Profile";
 import PostForm from "./pages/PostPages/PostForm";
 

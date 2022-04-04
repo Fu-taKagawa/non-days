@@ -10,7 +10,6 @@ const Form=({addPost})=>{
     const [text, setText]=useState("")
     const user = useContext(AuthContext)
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         var timestamp = moment().valueOf();

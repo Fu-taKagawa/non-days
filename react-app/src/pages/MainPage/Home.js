@@ -29,7 +29,7 @@ const Home = () => {
                         React.Children.toArray(posts.map(posts=> 
                             <li className='postItem'>
                                 <p className='postItem__user'>{posts.user}</p>
-                                <div>
+                                <div className='postItem__textbox'>
                                     <h1>{posts.title}</h1>
                                     <p>{posts.text}</p>
                                 </div>
