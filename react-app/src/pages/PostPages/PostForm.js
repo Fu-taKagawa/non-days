@@ -1,7 +1,6 @@
-import React,{useState} from "react";
+import {useState} from "react";
 import Form from "./Form";
 import {nanoid} from "nanoid";
-import List from "./List";
 
 const PostForm =()=>{
     const [posts, setPosts] = useState([]);

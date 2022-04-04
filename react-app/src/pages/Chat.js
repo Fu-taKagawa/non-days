@@ -3,20 +3,25 @@ import {Header} from '../components/header/Header'
 import { Link } from 'react-router-dom'
 import firebase from '../config/firebase'
 import { AuthContext } from '../AuthService'
+import moment from 'moment'
 
 const Chat = () => {
     const [messages, setMessages] = useState([])
     const [value, setValue] = useState('')
     const user = useContext(AuthContext)
+    messages.sort((a, b) => a.timestamp - b.timestamp)
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        var timestamp = moment().valueOf();
         firebase.firestore().collection('messages')
             .add({
                 content: value,
-                user: user.displayName
+                user: user.displayName,
+                timestamp:timestamp
             })
             
+        setValue('')
     }
 
     useEffect(() => {

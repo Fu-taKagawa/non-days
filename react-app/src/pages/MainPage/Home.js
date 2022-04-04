@@ -1,11 +1,11 @@
-import React ,{useState,useEffect,useContext}from 'react'
+import React ,{useState,useEffect}from 'react'
 import {Header} from '../../components/header/Header'
 import { Link } from 'react-router-dom'
 import firebase from '../../config/firebase'
 
 const Home = () => {
-    
     const [posts, setPosts] = useState([])
+    posts.sort((a, b) => a.timestamp - b.timestamp)
 
     useEffect(() => {
         firebase.firestore().collection('posts')
@@ -20,7 +20,10 @@ const Home = () => {
         <>
             <Header/>
             <div className='body'>
-                <Link to={'/postform'}>Go Post</Link>
+                <Link 
+                    to={'/postform'}
+                    onClick={()=>{console.log(posts)}}
+                >Go Post</Link>
                 <ul className='postArea'>
                     {
                         React.Children.toArray(posts.map(posts=> 
@@ -28,7 +31,7 @@ const Home = () => {
                                 <p className='postItem__user'>{posts.user}</p>
                                 <div>
                                     <h1>{posts.title}</h1>
-                                    {posts.text}
+                                    <p>{posts.text}</p>
                                 </div>
                             </li>
                         ))

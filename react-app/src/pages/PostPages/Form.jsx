@@ -1,26 +1,33 @@
-import React ,{useState, useContext}from "react";
+import {useState, useContext}from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/header/Header";
 import firebase from '../../config/firebase'
 import { AuthContext } from '../../AuthService'
+import moment from "moment";
 
 const Form=({addPost})=>{
     const [title,setTitle]=useState("")
     const [text, setText]=useState("")
     const user = useContext(AuthContext)
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        var timestamp = moment().valueOf();
         firebase.firestore().collection('posts')
             .add({
                 user: user.displayName,
                 title:title,
-                text: text
+                text: text,
+                timestamp:timestamp
             })
         if (text.trim() === '') return alert('文字を入力してください');
-        addPost(title,text);
-        setTitle('')
+        addPost(title,text,timestamp);
+        setTitle('');
         setText('');
     };
+
+
     return(
         <>
             <Header/>

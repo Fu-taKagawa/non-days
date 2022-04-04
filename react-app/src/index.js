@@ -6,6 +6,7 @@ import "./index.css";
 import "./pages/PostPages/post.css"
 import "./components/header/Header.css"
 
+
 ReactDOM.render(
     <App />,
     document.getElementById('root')
