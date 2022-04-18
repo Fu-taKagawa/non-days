@@ -18,6 +18,7 @@ const ProfileMain = () => {
     const handleChange = (event) => {
       setValue(event.target.value);
     };
+
     return (
         <>
         <STitle>My Profile</STitle>
@@ -80,6 +81,7 @@ const ProfileMain = () => {
             </SRadioBtn>
             </SProfileJobs>
             <br />
+            <a>編集確定</a>
         </SProfile>
         <Link to='/'>To Home</Link>
         </>

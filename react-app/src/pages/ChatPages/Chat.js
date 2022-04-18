@@ -20,7 +20,8 @@ const Chat = () => {
             .add({
                 content: value,
                 user: user.displayName,
-                timestamp:timestamp
+                timestamp:timestamp,
+                avatar: user.photoURL
             })
             
         setValue('')

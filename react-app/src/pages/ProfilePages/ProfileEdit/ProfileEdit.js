@@ -13,14 +13,14 @@ const Sample = () => {
         <SImg src={files?.source || defaultSrc} alt="preview" />
         <SDiv>
             <Sbutton
-            onClick={() =>
-                selectFiles(
-                { accept: 'image/*' },
-                ({ name, size, source, file }) => {
-                    console.log('Files Selected', { name, size, source, file });
-                }
+              onClick={() =>
+                  selectFiles(
+                  { accept: 'image/*' },
+                  ({ name, size, source, file }) => {
+                      console.log('Files Selected', { name, size, source, file });
+                  }
                 )
-            }
+              }
             >
             画像をアップ
             </Sbutton>

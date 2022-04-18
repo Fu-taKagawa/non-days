@@ -22,7 +22,6 @@ const Home = () => {
             <div className='body'>
                 <Link 
                     to={'/postform'}
-                    onClick={()=>{console.log(posts)}}
                 >Go Post</Link>
                 <ul className='postArea'>
                     {

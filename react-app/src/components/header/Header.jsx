@@ -15,6 +15,7 @@ export const Header =()=>{
                     to={'/chat'}>Chat Page</Link>
                 <a
                     className="LogoutBtn"
+                    href="/"
                     onClick={
                         ()=>{
                             firebase.auth().signOut()
