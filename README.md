@@ -24,8 +24,9 @@ npm install --global yarn
 # Usage
 ```bash
 git clone https://github.com/COOONinc/pj_react-app.git
-cd pj_react-app
-yarn install
+cd pj_react-app/react-app
+npm install react-scripts
+docker-compose build
 docker-compose up
 ```
  
