@@ -14,13 +14,12 @@ import styled from 'styled-components';
 const ProfileMain = () => {
     const user = useContext(AuthContext);
     const [value, setValue] = useState('回答しない');
-
     const handleChange = (event) => {
       setValue(event.target.value);
     };
 
     return (
-        <>
+      <>
         <STitle>My Profile</STitle>
         <br />
         <br />
@@ -84,7 +83,7 @@ const ProfileMain = () => {
             <a>編集確定</a>
         </SProfile>
         <Link to='/'>To Home</Link>
-        </>
+      </>
     );
 };
 

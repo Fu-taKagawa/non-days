@@ -17,6 +17,7 @@ export const Login = ({history}) => {
         })
         .catch(err => {
             console.log(err);
+            alert('メールアドレス・パスワードに間違いがあります。')
         });
     };
     if (user) {
@@ -29,7 +30,7 @@ export const Login = ({history}) => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor='email'>E-mail</label>
-                    <input 
+                    <input
                         type='email' 
                         id='email' 
                         name='email' 

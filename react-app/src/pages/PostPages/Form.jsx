@@ -10,6 +10,8 @@ const Form=({addPost})=>{
     const [text, setText]=useState("")
     const user = useContext(AuthContext)
 
+    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         var timestamp = moment().valueOf();
@@ -30,7 +32,6 @@ const Form=({addPost})=>{
     return(
         <>
             <Header/>
-            
             <div className='body'>
                 <Link to={'/'}>to Home</Link>
                 <h1>Post Page</h1>

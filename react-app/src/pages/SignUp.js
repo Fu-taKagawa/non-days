@@ -7,19 +7,35 @@ const SignUp = () => {
     const [password, setPassword] = useState('')
     const [name, setName] = useState('');
 
+    class Popup extends React.Component {
+        render() {
+            return (
+            <div className='popup'>
+                <div className='popup_inner'>
+                <h1>{this.props.text}</h1>
+                <button onClick={this.props.closePopup}>close me</button>
+                </div>
+            </div>
+            );
+        }
+    }
+
     const handleSubmit = e => {
-    e.preventDefault();
-    firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .then(({ user }) => {
-        user.updateProfile({
-            displayName: name,
+        e.preventDefault();
+        firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then(({ user }) => {
+            user.updateProfile({
+                displayName: name,
+            });
+        })
+        .catch(err => {
+            console.log(err);
         });
-    })
-    .catch(err => {
-        console.log(err);
-        });
+        setEmail('')
+        setName('')
+        setPassword('')
     };
     
 
@@ -50,6 +66,7 @@ const SignUp = () => {
                         value={email}
                         onChange={e=>{
                             setEmail(e.target.value)
+                            
                         }}
                     />
                 </div>
@@ -68,7 +85,9 @@ const SignUp = () => {
                     <p color='red'>※パスワードは6文字以上の英数字で入力してください</p>
                 </div>
                 
-                <button type='submit'>Sign Up</button>
+                <button 
+                    type='submit'
+                >Sign Up</button>
             </form>
 
             <Link to="/login">To Login Page</Link>
