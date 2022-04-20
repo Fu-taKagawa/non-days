@@ -13,23 +13,21 @@ If you know Instagram, this app is like that.
 # Requirement
  
 * Docker 20.10.12
-* yarn 1.22.17
 * node 14.17.3
  
 # Installation
-```yarn
-npm install --global yarn
+```
+npm install react-scripts
+npm install react-router-dom@5
+npm install moment
+npm install styled-components
+npm install use-file-upload
 ```
  
 # Usage
 ```bash
 git clone https://github.com/COOONinc/pj_react-app.git
 cd pj_react-app/react-app
-npm install react-scripts
-npm install react-router-dom@5
-npm install moment
-npm install styled-components
-npm install use-file-upload
 docker-compose build
 docker-compose up
 ```
