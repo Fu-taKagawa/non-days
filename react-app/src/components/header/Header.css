@@ -1,15 +1,20 @@
 header {
   display: flex;
-  width: 90%;
+  width: 100%;
   height: 100px;
   background-color: darkgrey;
   align-items: center;
   margin: auto;
 }
 
-.title {
+.logo {
   padding-left: 5%;
   margin-right: auto;
+  color: black;
+}
+.logo a{
+  text-decoration: none;
+  color: black;
 }
 
 .menu-item {
@@ -19,6 +24,79 @@ header {
   margin-right: 15%;
 }
 
-.LogoutBtn {
-  padding-left: 20px;
+.menu-item-sp{
+  width: 100%;
+  height: 60px;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  
+}
+
+.postPageBtn{
+  margin: 0 10px;
+}
+
+.chatPageBtn{
+  margin: 0 10px;
+}
+
+.profilePageBtn{
+  margin:0px 10px;
+}
+
+.logoutBtn{
+  margin: 0 10px;
+}
+
+/* sp-only fixed button*/
+.postPage{
+  width: 25%;
+  background-color: rgb(233, 243, 167);
+  text-decoration: none;
+  padding-top: 15px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: solid 1px rgb(176, 167, 45);
+  border-radius: 15%;
+}
+
+.chatPage{
+  width: 25%;
+  background-color: rgb(233, 243, 167);
+  text-decoration: none;
+  padding-top: 15px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: solid 1px rgb(176, 167, 45);
+  border-radius: 15%;
+}
+
+.profilePage{
+  width: 25%;
+  background-color: rgb(233, 243, 167);
+  text-decoration: none;
+  padding-top: 15px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: solid 1px rgb(176, 167, 45);
+  border-radius: 15%;
+}
+
+.logout{
+  width: 25%;
+  background-color: rgb(233, 243, 167);
+  text-decoration: none;
+  padding-top: 15px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: solid 1px rgb(176, 167, 45);
+  border-radius: 15%;
 }

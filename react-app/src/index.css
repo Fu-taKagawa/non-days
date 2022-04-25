@@ -2,7 +2,32 @@
     width: 100%;
 }
 
+.sp-only{
+    display: none;
+}
+
+@media screen and (max-width: 767px){
+    .sp-only{
+        display: block;
+    }
+}
+
+.pc-only{
+    display: inline;
+}
+
+@media screen and (max-width: 767px){
+    .pc-only{
+        display: none;
+    }
+}
+
 .body{
     width: 80%;
     margin: auto;
+}
+@media screen and (max-width: 767px){
+    .body{
+        width: 90%;
+    }
 }

@@ -9,6 +9,7 @@ import SignUp  from './pages/SignUp';
 import Chat from "./pages/ChatPages/Chat";
 import Profile from "./pages/ProfilePages/Profile";
 import PostForm from "./pages/PostPages/PostForm";
+import postEdit from "./pages/PostPages/PostEdit";
 
 const App=()=>{
     return(
@@ -21,6 +22,7 @@ const App=()=>{
                     <Route exact path='/chat' component={Chat}/>
                     <Route exact path='/profile' component={Profile}/>
                     <Route exact path='/postform' component={PostForm}/>
+                    <Route exact path='/postEdit' component={postEdit}/>
                 </Switch>
             </Router>
         </AuthProvider>
