@@ -22,7 +22,7 @@ const Form=({addPost})=>{
                 title:title,
                 text: text,
                 timestamp:timestamp,
-                id:postId
+                id:postId,
             })
         if (text.trim() === '') return alert('文字を入力してください');
         addPost(title,text,timestamp);

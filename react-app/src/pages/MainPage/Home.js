@@ -19,6 +19,7 @@ const Home = () => {
     }, [])
 
 
+
     return (
         <>
             <Header/>
@@ -31,6 +32,9 @@ const Home = () => {
                                 <div className='postTop'>
                                     <Link 
                                         to={'/postEdit'}
+                                        onClick={()=>{console.log(firebase.firestore().collection('posts').doc(`${posts.id}`).id);
+                                    }}
+                                        
                                     >Edit</Link>
                                     <button onClick={(e)=>{
                                         e.preventDefault();
