@@ -1,11 +1,13 @@
-import React ,{useState,useEffect}from 'react'
+import React ,{useState,useEffect, useContext}from 'react'
 import {Header} from '../../components/header/Header'
 import { Link } from 'react-router-dom'
 import firebase from '../../config/firebase'
+import { AuthContext } from '../../AuthService'
 
 
 const Home = () => {
     const [posts, setPosts] = useState([])
+    const user = useContext(AuthContext)
     
     posts.sort((a, b) => a.timestamp - b.timestamp)
     useEffect(() => {
@@ -32,13 +34,20 @@ const Home = () => {
                                 <div className='postTop'>
                                     <Link 
                                         to={'/postEdit'}
-                                        onClick={()=>{console.log(firebase.firestore().collection('posts').doc(`${posts.id}`).id);
-                                    }}
-                                        
+                                        onClick={()=>{
+                                            const postId = firebase.firestore().collection('posts').doc(`${posts.id}`).id
+                                            firebase.firestore().collection('postEdit').doc(`${postId}`)
+                                                .set({
+                                                    user: user.displayName,
+                                                    id: postId,
+                                                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                                                })
+                                        }}
                                     >Edit</Link>
                                     <button onClick={(e)=>{
                                         e.preventDefault();
                                         firebase.firestore().collection('posts').doc(`${posts.id}`).delete();
+                                        firebase.firestore().collection('postEdit').doc(`${posts.id}`).delete();
                                     }}>Delete</button>
                                 </div>
                                 <p className='postItem__user'>{posts.user}</p>
@@ -47,12 +56,6 @@ const Home = () => {
                                     <h1>{posts.title}</h1>
                                     <p>{posts.text}</p>
                                 </div>
-                                {/* <div className='likeField'>
-                                    <button className='btn'>
-                                        いいねボタン
-                                    </button>
-                                    <p>{posts.like}Likes</p>
-                                </div> */}
                             </li>
                         ))
                     }
