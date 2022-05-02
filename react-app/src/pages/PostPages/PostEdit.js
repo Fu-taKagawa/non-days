@@ -26,12 +26,6 @@ const PostEdit=()=>{
     const handleSubmit = (e) => {
         e.preventDefault();
         var timestamp = moment().valueOf();
-        // function confirmId(snapshot) {
-        //     return snapshot.forEach(confirmIds);
-        // }
-        // function confirmIds(doc) {
-        //     const editId = doc.id
-        // }
         firebase.firestore().collection('postEdit')
             .orderBy("timestamp", "desc")
             .limit(1)
@@ -76,7 +70,7 @@ const PostEdit=()=>{
                         placeholder="Write a caption"
                     />
                     <br />
-                    <button 
+                    <button
                         disabled={editText.trim() === ''} 
                         id="js-show-popup"
                     >修正完了</button>
