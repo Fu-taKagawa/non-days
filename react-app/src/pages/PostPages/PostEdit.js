@@ -47,6 +47,12 @@ const PostEdit=()=>{
             })
         if (editText.trim() === '') return alert('文字を入力してください');
     };
+    const handleReset =()=>{
+        setEditId('')
+        modal.classList.remove('hidden');
+        mask.classList.remove('hidden');
+        console.log(editId)
+    }
     return(
         <>
             <Header/>
@@ -98,10 +104,7 @@ const PostEdit=()=>{
                     </form>
                     <button
                         id="close"
-                        onClick={()=>{
-                            modal.classList.add('hidden');
-                            mask.classList.add('hidden');
-                        }}
+                        onClick={handleReset}
                     >戻る</button>
                 </section>
                     
