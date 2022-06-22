@@ -51,7 +51,6 @@ const PostEdit=()=>{
         setEditId('')
         modal.classList.remove('hidden');
         mask.classList.remove('hidden');
-        console.log(editId)
     }
     return(
         <>
@@ -59,7 +58,6 @@ const PostEdit=()=>{
             <div className='body'>
                 <Link to={'/'}>to Home</Link>
                 <h1>Edit Posts</h1>
-                
                 <form onSubmit={handleSubmit}>
                     <input
                         value={editTitle}
@@ -87,9 +85,7 @@ const PostEdit=()=>{
                 </form>
                 <div id="mask" className="hidden"></div>
                 <section id="modal" className="hidden">
-                    
                     <form onSubmit={handleSubmit} >
-                        
                         <section className="hidden">
                             <p>修正を完了しますか？</p>
                             <button

@@ -1,5 +1,6 @@
 import React from 'react';
-import { useFileUpload } from 'use-file-upload';
+import { useState } from 'react';
+
 
 import styled from 'styled-components';
 
@@ -7,24 +8,16 @@ const Sample = () => {
     const defaultSrc =
     'https://www.pngkit.com/png/full/301-3012694_account-user-profile-avatar-comments-fa-user-circle.png';
 
-    const [files, selectFiles] = useFileUpload();
     return (
     <div>
-        <SImg src={files?.source || defaultSrc} alt="preview" />
-        <SDiv>
-            <Sbutton
-              onClick={() =>
-                  selectFiles(
-                  { accept: 'image/*' },
-                  ({ name, size, source, file }) => {
-                      console.log('Files Selected', { name, size, source, file });
-                  }
-                )
-              }
-            >
-            画像をアップ
-            </Sbutton>
-        </SDiv>
+        <div>
+          <label htmlFor="avatar">ユーザー画像</label>
+          <input
+            type="file"
+            name="avatar"
+            id="avatar"
+          />
+        </div>
     </div>
     );
 };
