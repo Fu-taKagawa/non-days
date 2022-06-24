@@ -7,6 +7,7 @@ import { AuthContext } from '../../AuthService'
 
 const Home = () => {
     const [posts, setPosts] = useState([])
+    const [liked, setLiked] = useState(0)
     const user = useContext(AuthContext)
     posts.sort((a, b) => a.timestamp - b.timestamp)
     useEffect(() => {

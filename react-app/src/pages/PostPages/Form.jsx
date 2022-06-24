@@ -78,17 +78,17 @@ const Form=({addPost})=>{
                 <img src={imageUrl} alt="uploaded" />
                 <form onSubmit={handleSubmit}>
                     <input type="file" onChange={handleImage} />
-                    <br />
+                    <br/>
                     <input
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         placeholder="Write a title"
                     />
-                    <br />
+                    <br/>
                     <textarea
                         className="postForm__text"
                         value={text}
-                        type="text" 
+                        type="text"
                         onChange={(e) => setText(e.target.value)}
                         placeholder="Write a caption"
                     />
