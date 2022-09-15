@@ -7,7 +7,6 @@ export const Login = ({history}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const user = useContext(AuthContext)
-
     const handleSubmit = e => {
     e.preventDefault();
     firebase
@@ -23,15 +22,14 @@ export const Login = ({history}) => {
     if (user) {
         return <Redirect to="/" />
     }
-
     return (
         <div className='Login'>
             <div className='LoginBox'>
-                <h1>Login</h1>        
+                <h1>Login</h1>
                 <form onSubmit={handleSubmit}>
                     <div className='LoginBox__email'>
                         <label htmlFor='email'>E-mail</label>
-                        <br />
+                        <br/>
                         <input
                             type='email' 
                             id='email' 
@@ -44,7 +42,7 @@ export const Login = ({history}) => {
                     <div className='LoginBox__pass'>
                         <label htmlFor='password'>Password</label>
                         <br />
-                        <input 
+                        <input
                             type='password' 
                             id='password' 
                             name='password'
