@@ -1,0 +1,35 @@
+.Login{
+    background-color: #FFF8DE;
+}
+
+.LoginBox{
+    position: relative;
+    top: 250px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    border: solid 1px #000;
+}
+
+.LoginBox input{
+    width: 80%;
+    height: 25px;
+}
+
+.LoginBox__email{
+    margin: 20px 0px;
+}
+
+.LoginBox__pass{
+    margin: 20px 0px;
+}
+
+.LoginBox button{
+    margin: 10px 0;
+}
+
+.LoginBox a{
+    color: #b08a00;
+    text-decoration: none;
+}

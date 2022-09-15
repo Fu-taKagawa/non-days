@@ -73,7 +73,7 @@ const Form=({addPost})=>{
         <>
             <Header/>
             <Link to={'/'}>to Home</Link>
-            <div className='body'>
+            <div className='appBody'>
                 <h1>Post Page</h1>
                 <img src={imageUrl} alt="uploaded" />
                 <form onSubmit={handleSubmit}>

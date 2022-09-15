@@ -55,7 +55,7 @@ const PostEdit=()=>{
     return(
         <>
             <Header/>
-            <div className='body'>
+            <div className='appBody'>
                 <Link to={'/'}>to Home</Link>
                 <h1>Edit Posts</h1>
                 <form onSubmit={handleSubmit}>
