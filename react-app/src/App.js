@@ -4,8 +4,8 @@ import {AuthProvider} from './AuthService';
 import LoggedInRoute from "./LoggedInRoute";
 
 import Home from "./pages/MainPage/Home";
-import Login  from './pages/Login';
-import SignUp  from './pages/SignUp';
+import Login  from './pages/Login/Login';
+import SignUp  from './pages/Signup/SignUp';
 import Chat from "./pages/ChatPages/Chat";
 import Profile from "./pages/ProfilePages/Profile";
 import PostForm from "./pages/PostPages/PostForm";

@@ -32,9 +32,10 @@
 }
 
 .postItem{
-    width: 450px;
+    width: 550px;
     border: solid 1px #000;
     margin-bottom: 20px;
+    background-color: #fff;
 }
 @media screen and (max-width: 767px){
     .postItem{
@@ -42,9 +43,15 @@
     }
 }
 
+.postItem__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #000 ;
+}
+
 .postItem__user{
     padding-left: 20px;
-    border-bottom: solid 1px #000;
 }
 
 .postItem__textbox{

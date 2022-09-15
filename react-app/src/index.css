@@ -1,5 +1,12 @@
-.appBody{
+body{
     width: 100%;
+    margin: 0;
+    background-color: #FFF8DE;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
 }
 
 .sp-only{
@@ -22,9 +29,9 @@
     }
 }
 
-.body{
+.appBody{
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
 }
 @media screen and (max-width: 767px){
     .body{

@@ -1,0 +1,36 @@
+
+.SignUpBox{
+    position: relative;
+    top: 220px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    border: solid 1px #000;
+}
+
+.SignUpBox input{
+    width: 80%;
+    height: 25px;
+}
+
+.SignUpBox__name{
+    margin: 20px 0;
+}
+
+.SignUpBox__email{
+    margin: 20px 0px;
+}
+
+.SignUpBox__pass{
+    margin: 20px 0px;
+}
+
+.SignUpBox button{
+    margin: 10px 0;
+}
+
+.SignUpBox a{
+    color: #b08a00;
+    text-decoration: none;
+}

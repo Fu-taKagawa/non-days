@@ -40,7 +40,7 @@ const Chat = () => {
     return (
         <>
             <Header/>
-            <div className='body'>
+            <div className='appBody'>
                 <ul className='chatArea'>
                     {
                         React.Children.toArray(messages.map(messages=> <li>{messages.user}:{messages.content}</li>))

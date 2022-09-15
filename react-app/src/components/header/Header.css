@@ -2,9 +2,10 @@ header {
   display: flex;
   width: 100%;
   height: 100px;
-  background-color: darkgrey;
+  background-color: #fff;
   align-items: center;
   margin: auto;
+  border-bottom: solid 2px #e1e1e1;
 }
 
 .logo {
@@ -50,6 +51,10 @@ header {
 
 .logoutBtn{
   margin: 0 10px;
+}
+
+.header__displayName{
+  text-align: center;
 }
 
 /* sp-only fixed button*/

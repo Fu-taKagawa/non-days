@@ -11,13 +11,13 @@ export const Header =()=>{
             <div className="menu-item">
                 <Link 
                     className="postPageBtn pc-only"
-                    to={'/postform'}>Go Post</Link>
-                <Link 
+                    to={'/postform'}>Post</Link>
+                {/* <Link 
                     className="chatPageBtn pc-only"
-                    to={'/chat'}>Chat Page</Link>
+                    to={'/chat'}>Chat Page</Link> */}
                 <Link 
                     className="profilePageBtn pc-only"
-                    to={'/profile'}>To Profile</Link>
+                    to={'/profile'}>Profile</Link>
                 <a
                     className="logoutBtn pc-only"
                     href="/"
@@ -28,18 +28,18 @@ export const Header =()=>{
                     }
                     >Logout
                 </a>
-                <p>ようこそ <br className="sp-only"/> {user.displayName} さん</p>
+                <p className="header__displayName">ようこそ <br className="sp-only"/> {user.displayName} さん</p>
                 <div className="menu-item-sp">
                     <Link 
                         className="postPage sp-only"
                         to={'/postform'}>
                         Post
                     </Link>
-                    <Link 
+                    {/* <Link 
                         className="chatPage sp-only"
                         to={'/chat'}>
                         Chat
-                    </Link>
+                    </Link> */}
                     <Link 
                         className="profilePage sp-only"
                         to={'/profile'}>
